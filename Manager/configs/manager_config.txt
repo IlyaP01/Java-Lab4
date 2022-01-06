@@ -1,0 +1,14 @@
+INPUT_FILE = Manager/test/very_big.avi
+OUTPUT_FILE = Manager/test/decoded_very_big.avi
+
+READER_NAME = com.pipeline.Reader
+WRITER_NAME = com.pipeline.Writer
+# Экзекьюторы расставляются на конвейере в том порядке, в котором указаны
+EXECUTORS_NAMES = com.pipeline.RLEExecutor, com.pipeline.RLEExecutor
+
+READER_CONFIG = Manager/configs/reader_config.txt
+# Порядок конфигов экзекьютеров должен соответствовать порядку экзекьютеров
+EXECUTORS_CONFIGS = Manager/configs/RLEConfEnc.txt, Manager/configs/RLEConfDec.txt
+WRITER_CONFIG = Manager/configs/writer_config.txt
+
+LOG_FILE = Manager/log.txt
